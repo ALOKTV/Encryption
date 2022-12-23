@@ -1,1 +1,1 @@
-*.Python linguist-detectable=true
+yolo_model/custom.weights filter=lfs diff=lfs merge=lfs -text
