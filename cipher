@@ -1,0 +1,33 @@
+alphabet = [
+    'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o',
+    'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'a', 'b', 'c', 'd',
+    'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's',
+    't', 'u', 'v', 'w', 'x', 'y', 'z'
+]
+
+
+def caesar(start_text, shift_text, ciper_direction):
+    end_text = ""
+    if ciper_direction == "decode":
+        shift_text = shift_text * -1
+    for letter in start_text:
+        if letter in alphabet:
+            position = alphabet.index(letter)
+
+            new_postition = position + shift_text
+            end_text += alphabet[new_postition]
+        else:
+            print("alphabets only")
+    print(f"the {ciper_direction}d is {end_text}")
+
+
+s = True
+while s:
+    direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n")
+    text = input("Type your message:\n").lower()
+    shift = int(input("Type the shift number:\n"))
+    shift = shift % 25
+    caesar(start_text=text, shift_text=shift, ciper_direction=direction)
+    rs = input("yes or no")
+    if rs == "no":
+        s = False
