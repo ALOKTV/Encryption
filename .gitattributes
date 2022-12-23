@@ -1,1 +1,1 @@
-*. python linguist-detectable=true
+*.rb python linguist-language=true
