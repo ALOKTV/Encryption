@@ -28,6 +28,6 @@ while s:
     shift = int(input("Type the shift number:\n"))
     shift = shift % 25
     caesar(start_text=text, shift_text=shift, ciper_direction=direction)
-    rs = input("yes or no")
+    rs = input(" Do you want to continue yes or no")
     if rs == "no":
         s = False
